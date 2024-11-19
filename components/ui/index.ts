@@ -16,3 +16,15 @@ export {
 } from "./card/card";
 export { Separator } from "./separator/separator";
 export { Checkbox } from "./checkbox/checkbox";
+export {
+    Dialog,
+    DialogPortal,
+    DialogOverlay,
+    DialogClose,
+    DialogTrigger,
+    DialogContent,
+    DialogHeader,
+    DialogFooter,
+    DialogTitle,
+    DialogDescription,
+  } from"./dialog/dialog"
