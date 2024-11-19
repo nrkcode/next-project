@@ -51,7 +51,7 @@ function BoardPage() {
                             className={styles.header__top__input}
                         />
                         {/* 진행상황 척도 그래프 섹션 */}
-                        <div className="flex items-center justify-start gap-4">
+                        <div className="flex items-center justify-start gap-5">
                             <small className="text-sm font-medium leading-none text-[#6D6D6D]">
                                 1/10 Completed
                             </small>
