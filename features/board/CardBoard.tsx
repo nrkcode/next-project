@@ -1,17 +1,6 @@
-import {
-    Button,
-    Card,
-    LabelDatePicker,
-    Separator,
-    Checkbox,
-    Dialog,
-    DialogHeader,
-    DialogFooter,
-    DialogContent,
-    DialogDescription,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui";
+"use client";
+
+import { Button, Card, Checkbox, Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger, LabelDatePicker, Separator } from "@/components/ui";
 import { ChevronUp } from "lucide-react";
 
 function CardBoard() {
@@ -21,12 +10,7 @@ function CardBoard() {
             <div className="w-full flex items-center justify-between mb-4">
                 <div className="flex items-center justify-start gap-2">
                     <Checkbox className="h-5 w-5" />
-                    <input
-                        type="text"
-                        placeholder="제목 없음"
-                        className="text-xl outline-none"
-                        disabled={true}
-                    />
+                    <input type="text" placeholder="제목 없음." className="text-xl outline-none bg-transparent" disabled={true} />
                 </div>
                 <Button variant={"ghost"} size={"icon"}>
                     <ChevronUp className="text-[#6d6d6d]" />
@@ -41,16 +25,10 @@ function CardBoard() {
                 </div>
                 {/* 버튼 박스 */}
                 <div className="flex items-center">
-                    <Button
-                        variant={"ghost"}
-                        className="font-normal text-[#6D6D6D]"
-                    >
+                    <Button variant={"ghost"} className="font-normal text-[#6D6D6D]">
                         Duplicate
                     </Button>
-                    <Button
-                        variant={"ghost"}
-                        className="font-normal text-rose-600 hover:text-rose-600 hover:bg-red-50"
-                    >
+                    <Button variant={"ghost"} className="font-normal text-rose-600 hover:text-rose-600 hover:bg-red-50">
                         Delete
                     </Button>
                 </div>
@@ -59,20 +37,14 @@ function CardBoard() {
             {/* Add Contents 버튼 영역 */}
             <Dialog>
                 <DialogTrigger asChild>
-                    <Button
-                        variant={"ghost"}
-                        className="font-normal text-[#6D6D6D]"
-                    >
+                    <Button variant={"ghost"} className="font-normal text-[#6D6D6D]">
                         Add Contents
                     </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                     <DialogHeader>
                         <DialogTitle>Edit profile</DialogTitle>
-                        <DialogDescription>
-                            Make changes to your profile here. Click save when
-                            you're done.
-                        </DialogDescription>
+                        <DialogDescription>Make changes to your profile here. Click save when you're done.</DialogDescription>
                     </DialogHeader>
                     <div className="grid gap-4 py-4"></div>
                     <DialogFooter>
