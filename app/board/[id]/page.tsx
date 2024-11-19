@@ -3,12 +3,7 @@
 import { useState } from "react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
-import {
-    Button,
-    SearchBar,
-    Progress,
-    LabelDatePicker,
-} from "@/components/ui";
+import { Button, SearchBar, Progress, LabelDatePicker } from "@/components/ui";
 import { Calendar as CalendarIcon } from "lucide-react";
 import styles from "./page.module.scss";
 
@@ -64,12 +59,31 @@ function BoardPage() {
                             <LabelDatePicker label="From" />
                             <LabelDatePicker label="To" />
                         </div>
-                        <Button className="text-white bg-[#E79057] hover:bg-[#E26F24] hover:ring-1 hover:ring-[#E26F24] hover:ring-offset-1 active:bg-[#D5753D] hover:shadow-lg">
+                        <Button
+                        className="text-white bg-[#E79057] hover:bg-[#E26F24] hover:ring-1
+                        hover:ring-[#E26F24] hover:ring-offset-1 active:bg-[#D5753D] hover:shadow-lg
+                        onClick={() => router.push()}">
                             Add New Board
                         </Button>
                     </div>
                 </div>
-                <div className={styles.body}></div>
+                <div className={styles.body}>
+                    <div className="flex flex-col items-center justify-center gap-5 mb-6">
+                        <div className="flex flex-col items-center gap-3">
+                            <small className="text-sm font-normal leading-none">
+                                There is no board yet.
+                            </small>
+                            <small className="text-sm font-normal leading-none">
+                                Click the button and start flashing!
+                            </small>
+                        </div>
+                        <img
+                            className="h-74 w-74"
+                            alt="+"
+                            src="./assets/AddNewBoardButtonSimple.png"
+                        />
+                    </div>
+                </div>
             </main>
         </div>
     );
